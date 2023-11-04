@@ -1,0 +1,65 @@
+.fondo {
+	background-color: black;
+	width: 400px;
+	height: 520px;
+	border-radius: 20px;
+}
+
+.resultado {
+	background-color: whitesmoke;
+	width: 300px;
+	height: 50px;
+	margin-right: 50px;
+	margin-left: 50px;
+	border: none;
+	border-radius: 10px;
+	margin: 50px;
+	font-family: Consolas;
+	font-size: 25px;
+	text-align: right;
+}
+
+.boton {
+	background-color: #D1D1D1;
+	width: 70px;
+	height: 70px;
+	margin-left: 50px;
+	border: none;
+	border-radius: 100%;
+	font-family: Consolas;
+	font-size: 25px;
+}
+
+.boton1 {
+	background-color: #D1D1D1;
+	width: 70px;
+	height: 70px;
+	margin-left: 3.333333px;
+	border: none;
+	border-radius: 100%;
+	font-family: Consolas;
+	font-size: 25px;
+}
+
+.boton2 {
+	background-color: #88E8E1;
+	width: 70px;
+	height: 70px;
+	margin-left: 3.333333px;
+	border: none;
+	border-radius: 100%;
+	font-family: Consolas;
+	font-size: 25px;
+}
+
+.etiqueta {
+	background-color: black;
+	width: 400px;
+	height: 30px;
+	border-radius: 20px;
+	text-align: center;
+	color: whitesmoke;
+	margin: 5;
+	font-family: Consolas;
+	font-size: 22px;
+}
