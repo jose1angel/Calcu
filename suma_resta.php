@@ -1,16 +1,15 @@
 <?php
-// Obtener los valores ingresados por el usuario
-$operando1 = $_POST['operando1'];
-$operando2 = $_POST['operando2'];
-$operador = $_POST['operador'];
+        if (isset($_GET['numero1'], $_GET['numero2'], $_GET['operacion'])) {
+            $numero1 = $_GET['numero1'];
+            $numero2 = $_GET['numero2'];
+            $operacion = $_GET['operacion'];
 
-// Realizar la operación según el operador seleccionado
-switch ($operador) {
-    case '+':
-        $resultado = $operando1 + $operando2;
-        break;
-    case '-':
-        $resultado = $operando1 - $operando2;
-        break;
-    case '*':}
-?>
+            switch ($operacion) {
+                case "suma":
+                    $resultado = $numero1 + $numero2;
+                    break;
+                case "resta":
+                    $resultado = $numero1 - $numero2;
+                    break;
+                }
+                    ?>
