@@ -9,7 +9,8 @@
 <body>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<form name="calculator" class="fondo" style="margin-top: 5px">
-	    <input class="resultado" type="textfield" name="ans" value="">
+	 <input class="resultado" type="textfield" name="ans" value="">
+	<form method="post" action="index.html">
 	    <br>
 	    <input type="button" class="boton" value="1" onClick="document.calculator.ans.value+='1'">
 	    <input type="button" value="2" class="boton1" onClick="document.calculator.ans.value+='2'">
@@ -34,6 +35,36 @@
 	    <input type="button" class="boton1" value="/" onClick="document.calculator.ans.value+='/'">
 	    <input type="button" class="boton2" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
     </form>
+ <?php
+        if (isset($_POST['calcular'])) {
+            $numero1 = $_POST['numero1'];
+            $numero2 = $_POST['numero2'];
+            $operacion = $_POST['operacion'];
 
+            $url = "index.html?numero1=$numero1&numero2=$numero2&operacion=$operacion";
+            header("Location: $url");
+            exit();
+        }
+        ?>
 </body>
 </html>
+
+ <?php
+        if (isset($_GET['numero1'], $_GET['numero2'], $_GET['operacion'])) {
+            $numero1 = $_GET['numero1'];
+            $numero2 = $_GET['numero2'];
+            $operacion = $_GET['operacion'];
+
+            switch ($operacion) {
+                case "suma":
+                    $resultado = $numero1 + $numero2;
+                    break;
+                case "resta":
+                    $resultado = $numero1 - $numero2;
+		    }
+      echo "<h2>Resultado</h2>";
+            echo "<p>$resultado</p>";
+        } else {
+            echo "<h3>Error: No se proporcionaron los parámetros necesarios.</h3>";
+        }
+        ?>
