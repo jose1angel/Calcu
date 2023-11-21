@@ -61,6 +61,19 @@
                     break;
                 case "resta":
                     $resultado = $numero1 - $numero2;
+ case '*':
+    $resultado = $operando1 * $operando2;
+ break;
+case '/':
+ $resultado = $operando1 / $operando2;
+ break;
+default:
+ echo "Operador inválido";
+ break;
+}
+
+// Mostrar el resultado
+echo "El resultado de la operación es: " . $resultado;
 		    }
       echo "<h2>Resultado</h2>";
             echo "<p>$resultado</p>";
